@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's the weather like?</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="weather">
+      <form>
+        <div>
+          <p>What's the weather like in:</p>
+        </div>
+        <div class="inputContainer">
+          <input type="text" id="cityInput" name="cityInput" />
+        </div>
+        <div>
+          <input type="submit" value="Search" />
+        </div>
+        <p id="cityTemp"></p>
+      </form>
+    </div>
+    <script type='text/javascript' src='config.js'></script>
+    <script src="./index.js"></script>
+  </body>
+</html>

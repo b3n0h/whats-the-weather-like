@@ -17,15 +17,16 @@ function displayWeather(data) {
   let cityTemp = data.main.temp.toString().slice(0, 2)
   
   if (cityTemp <= '60') {
+
     showWeather.innerHTML = `
-    The temperature in ${cityName} is ${cityTemp}°F, <br /> better bring a jacket! 
+    The temperature in ${cityName} is <span style="color: blue">${cityTemp}°F</span>, <br /> better bring a jacket! 
     `
   } else if (cityTemp >= '80') {
     showWeather.innerHTML = `
-    The temperature in ${cityName} is ${cityTemp}°F, <br /> better wear some sunscreen!
+    The temperature in ${cityName} is <span style="color: orange">${cityTemp}°F</span>, <br /> better wear some sunscreen!
     `
   } else {
     showWeather.innerHTML = 
-    `The temperature in ${cityName} is ${cityTemp}°F`
+      `The temperature in ${cityName} is <span style='font-weight: bold'>${cityTemp}°F</span>`
   }
 }

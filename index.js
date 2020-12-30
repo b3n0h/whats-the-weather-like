@@ -13,10 +13,19 @@ cityInput.addEventListener('change', () => {
 
 function displayWeather(data) {
   console.log(data)
-  console.log(data.weather[0])
   let cityName = data.name
   let cityTemp = data.main.temp.toString().slice(0, 2)
-  showWeather.innerHTML = `
-  The temperature in ${cityName} is ${cityTemp}°F <br />
-  `
+  
+  if (cityTemp <= '60') {
+    showWeather.innerHTML = `
+    The temperature in ${cityName} is ${cityTemp}°F, <br /> better bring a jacket! 
+    `
+  } else if (cityTemp >= '80') {
+    showWeather.innerHTML = `
+    The temperature in ${cityName} is ${cityTemp}°F, <br /> better wear some sunscreen!
+    `
+  } else {
+    showWeather.innerHTML = 
+    `The temperature in ${cityName} is ${cityTemp}°F`
+  }
 }
